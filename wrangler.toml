@@ -1,4 +1,4 @@
-name = "tea"
+name = "vulnesis-tea"
 compatibility_date = "2024-03-20"
 compatibility_flags = ["nodejs_compat"]
 upload_source_maps = true
@@ -9,9 +9,9 @@ cpu_ms = 3000
 
 [[d1_databases]]
 binding = "d1db"
-database_name = "tea"
+database_name = "vulnesis-tea"
 database_id = "d1:example-database-id"
 
 [[r2_buckets]]
 binding = 'r2artifacts'
-bucket_name = 'artifacts'
+bucket_name = 'vulnesis-tea-artifacts'
