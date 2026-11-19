@@ -1,0 +1,7 @@
+# scripts/rebrand.py config (Vulnesis/ops).
+# Shared Cloudflare account: the Vulnesis Pages project, its D1 and its R2 bucket
+# must not be the Vulnetix ones.
+rewrite name = "tea" => name = "vulnesis-tea"
+rewrite --project-name tea => --project-name vulnesis-tea
+rewrite database_name = "tea" => database_name = "vulnesis-tea"
+rewrite bucket_name = 'artifacts' => bucket_name = 'vulnesis-tea-artifacts'
