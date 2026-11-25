@@ -18,7 +18,7 @@ permissions:
 jobs:
   bearer:
     name: Bearer (SAST)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Run Bearer
@@ -49,7 +49,7 @@ jobs:
 
   cdxgen:
     name: cdxgen (multi-ecosystem SBOM)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up Node.js
@@ -81,7 +81,7 @@ jobs:
 
   cyclonedx-node:
     name: CycloneDX npm SBOM
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up Node.js
@@ -114,7 +114,7 @@ jobs:
 
   detect-secrets:
     name: detect-secrets (secrets)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up uv
@@ -228,7 +228,7 @@ jobs:
 
   eslint:
     name: ESLint (JavaScript lint)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up Node.js
@@ -270,7 +270,7 @@ jobs:
 
   github-sbom:
     name: GitHub SBOM (SPDX)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Export the dependency graph
@@ -302,7 +302,7 @@ jobs:
 
   gitleaks:
     name: Gitleaks (Secrets)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Run Gitleaks
@@ -328,7 +328,7 @@ jobs:
 
   grype:
     name: Grype (SCA)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Run Grype
@@ -355,7 +355,7 @@ jobs:
 
   njsscan:
     name: njsscan (Node SAST)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up uv
@@ -393,7 +393,7 @@ jobs:
 
   noseyparker:
     name: Nosey Parker (secrets)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Run Nosey Parker
@@ -427,7 +427,7 @@ jobs:
 
   npm-audit:
     name: npm audit (Node SCA)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up Node.js
@@ -461,7 +461,7 @@ jobs:
 
   opengrep:
     name: OpenGrep (SAST)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Run OpenGrep
@@ -495,7 +495,7 @@ jobs:
 
   osv-scanner:
     name: OSV-Scanner (SCA)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Run OSV-Scanner
@@ -517,7 +517,7 @@ jobs:
 
   retirejs:
     name: Retire.js (JavaScript SCA)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up Node.js
@@ -549,7 +549,7 @@ jobs:
 
   scancode:
     name: ScanCode Toolkit (license SBOM)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up uv
@@ -607,7 +607,7 @@ jobs:
 
   semgrep:
     name: Semgrep (SAST)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up uv
@@ -637,7 +637,7 @@ jobs:
 
   syft:
     name: Syft (CycloneDX SBOM)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Generate CycloneDX SBOM
@@ -659,7 +659,7 @@ jobs:
 
   trivy-fs:
     name: Trivy (filesystem CDX + SARIF)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Trivy filesystem (CycloneDX)
@@ -691,7 +691,7 @@ jobs:
 
   trufflehog:
     name: TruffleHog (secrets)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Run TruffleHog
@@ -819,7 +819,7 @@ jobs:
 
   yarn-cyclonedx:
     name: CycloneDX Yarn SBOM
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up Node.js
@@ -853,7 +853,7 @@ jobs:
 
   zizmor:
     name: zizmor (GitHub Actions SAST)
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     steps:
       - uses: actions/checkout@v7.0.1
       - name: Set up uv
@@ -895,7 +895,7 @@ jobs:
 
   publish:
     name: Publish to Vulnetix
-    runs-on: [self-hosted, Linux, X64, vulnetix-local]
+    runs-on: [self-hosted, Linux, X64, vulnesis-cf]
     needs: [bearer, cdxgen, cyclonedx-node, detect-secrets, eslint, github-sbom, gitleaks, grype, njsscan, noseyparker, npm-audit, opengrep, osv-scanner, retirejs, scancode, semgrep, syft, trivy-fs, trufflehog, yarn-cyclonedx, zizmor]
     if: always()
     permissions:
